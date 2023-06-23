@@ -1,0 +1,23 @@
+{
+  "name": "atividadefinal",
+  "version": "1.0.0",
+  "description": "cadastro de alunos e funcionarios no sistema de uma biblioteca",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cadastro",
+    "alunos",
+    "funcionarios"
+  ],
+  "author": "Jessica Yamashita, Kezia Ferretti",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login - Biblioteca</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container align-items-center">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-4 mx-auto">
+          <form class="form-login needs-validation" method="POST" action="/login" novalidate> 
+            <h2 class="text-center mb-4">Acesso ao Sistema</h2>
+            <p class="text-center mb-4">Seja bem-vindo!</p>
+            <div class="form-group">
+              <label for="usuario">Usuário:</label>
+              <input type="text" name="usuario" id="validadeUsuario" class="form-control " placeholder="Usuario" autofocus required>
+              <div class="valid-feedback">
+                
+              </div>
+              <div class="invalid-feedback">
+                  Por favor, informe o nome do usuário!
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="senha">Senha:</label>
+              <input type="password" name="senha" id="validaSenha" class="form-control " placeholder="Senha" required>
+              <div class="valid-feedback">
+                
+              </div>
+              <div class="invalid-feedback">
+                Por favor, informe a senha.
+              </div>
+            </div>
+            <input type="submit" value="Entrar" class="btn btn-primary btn-block mt-4">
+          </form>
+          <script>
+            (() => { 'use strict'
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          const forms = document.querySelectorAll('.needs-validation')
+
+          // Loop over them and prevent submission
+          Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+          })()
+        </script>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+  
+</html>

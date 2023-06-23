@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro de Usuário</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="card border-info mb-3">
+                <div class="card-header bg-info text-white text-center">
+                    <h2 class="font-weight-bold">Cadastro de Usuário</h2>
+                </div>
+                <div class="card-body">
+                    <form id="formUsuario" method="POST" action="#" class="" novalidate>    
+                        <div class="form-group row">
+                            <label for="nome" class="col-sm-2 col-form-label font-weight-bold is-invalid">Nome</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cpf" class="col-sm-2 col-form-label font-weight-bold">CPF</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
+                            </div>
+                            <label for="tipo" class="col-sm-2 col-form-label font-weight-bold">Tipo</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" id="tipo">
+                                    <option value="">Selecione um tipo</option>
+                                    <option value="funcionario">Funcionário</option>
+                                    <option value="estudante">Estudante</option>
+                                    <option value="comunidade">Comunidade</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="endereco" class="col-sm-2 col-form-label font-weight-bold">Endereço</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="endereco" placeholder="Digite seu endereço completo">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cep" class="col-sm-2 col-form-label font-weight-bold">CEP</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="cep" placeholder="XXXXX-XXX">
+                            </div>
+                            <label for="bairro" class="col-sm-2 col-form-label font-weight-bold">Bairro</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="bairro" placeholder="Digite seu bairro">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="cidade" class="col-sm-2 col-form-label font-weight-bold">Cidade</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade">
+                            </div>
+                            <label for="estado" class="col-sm-2 col-form-label font-weight-bold">Estado</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" id="estado">
+                                    <option value="">Selecione um estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">   
+                            <label for="telefone" class="col-sm-2 col-form-label font-weight-bold">Telefone:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                            </div>
+                                            
+                            <label for="email" class="col-sm-2 col-form-label font-weight-bold">E-mail:</label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="email@email.com" required>
+                            </div>
+                        </div>
+                        <button type="submit" id="cadastrar" class="btn btn-primary">Cadastrar</button>
+                        <button type="button" class="btn btn-warning" id="atualizar" disabled>Atualizar</button>
+                        <button type="button" class="btn btn-danger" id="excluir" disabled>Excluir</button>
+                        <button type="button" class="btn btn-secondary" onclick="history.back()">Voltar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="mensagem">
+
+        </div>
+
+        <div id="tabela">
+
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script/scriptUsuarios.js"> </script>
+    <script>
+        const form = document.getElementById('formUsuario');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const inputs = document.querySelectorAll('.form-control');
+            
+            inputs.forEach(function(input) {
+                if (input.value.trim() === '') {
+                    input.classList.add('is-invalid');
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+        });
+    </script>
+
+    
+
+</html>
